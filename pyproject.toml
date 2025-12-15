@@ -1,5 +1,5 @@
 [project]
-name = "helc2png"
+name = "heic2png"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
