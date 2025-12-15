@@ -1,4 +1,4 @@
-# helc2png
+# heic2png
 
 A Python utility for batch converting HEIC images to PNG format.
 
@@ -27,7 +27,7 @@ Follow these steps to get the converter up and running:
 
 4.  **Run the Script**:
     ```bash
-    uv run main.py
+    uv run python main.py
     ```
 
 ## Project Structure
@@ -58,7 +58,7 @@ The script uses hardcoded paths for input and output. No external configuration 
     *   **Important**: The script explicitly looks for files with the **`.HEIC`** extension (case-sensitive). Ensure your files have uppercase extensions or rename them.
 2.  Run the script:
     ```bash
-    uv run main.py
+    uv run python main.py
     ```
 3.  The script will print the status of each file conversion.
 4.  Find your converted images in `output/png/`.
