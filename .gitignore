@@ -1,2 +1,13 @@
-output/png/*
-input/heic/*
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+output/png/*.png
+input/heic/*.heic

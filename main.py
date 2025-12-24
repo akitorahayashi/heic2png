@@ -3,22 +3,22 @@ from PIL import Image
 import pillow_heif
 
 def main():
-    # 変換元のフォルダと変換後のフォルダを指定します
+    # Specify the source folder and the output folder
     input_folder = "input/heic/"
     output_folder = "output/png/"
 
-    # 変換元のフォルダ内のHEICファイルを取得します
+    # Get HEIC files in the source folder
     heic_files = [f for f in os.listdir(input_folder) if f.endswith('.HEIC')]
 
     for heic_file in heic_files:
-        # HEICファイルのパスを作成
+        # Create the path for the HEIC file
         heic_path = os.path.join(input_folder, heic_file)
         
-        # PNGファイルのパスを作成
+        # Create the path for the PNG file
         png_file = os.path.splitext(heic_file)[0] + '.png'
         png_path = os.path.join(output_folder, png_file)
         
-        # HEICファイルをPNGに変換
+        # Convert HEIC file to PNG
         heif_file = pillow_heif.read_heif(heic_path)
         image = Image.frombytes(
             heif_file.mode, 
@@ -30,9 +30,9 @@ def main():
         )
         image.save(png_path, 'PNG')
         
-        print(f'{heic_file} を {png_file} に変換しました。')
+        print(f'Converted {heic_file} to {png_file}.')
 
-    print('変換が完了しました。')
+    print('Conversion completed.')
 
 
 if __name__ == "__main__":
